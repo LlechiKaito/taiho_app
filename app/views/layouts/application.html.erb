@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TaihoApp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header>
+      <div class = "header">
+        <div class = "title">
+          <%= link_to "足利泰鵬支店配達サイト", root_path, class: "title" %>
+        </div>
+        <div class = "user-admin">
+          <%if user_signed_in? %>
+            <%= link_to "マイページ", user_path(current_user), class: "login" %>
+            <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "registration" %>
+          <% else %>
+            <%= link_to "ログイン", new_user_session_path, class: "login" %>
+            <%= link_to "新規登録", new_user_registration_path, class: "registration" %>
+          <% end %>
+        </div>
+      </div>
+    </header>
+    <%= yield %>
+  </body>
+</html>

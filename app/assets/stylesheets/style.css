@@ -1,0 +1,38 @@
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px ;
+  padding-left: 180px;
+  background-color:rgb(96, 192, 96);
+}
+
+.title{
+  margin: 0 auto;
+  font-size: 35px;
+  text-decoration: none;
+  color:black;
+}
+
+.user-admin{
+  display: flex;
+  align-items: center;
+}
+
+.login{
+  margin-right: 10px;
+  color: blue;
+  text-decoration: none;
+}
+
+.form-title{
+  margin: 30px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.registration{
+  color: blue;
+  text-decoration: none;
+}
+
