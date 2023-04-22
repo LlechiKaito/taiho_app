@@ -17,7 +17,7 @@
         </div>
         <div class = "user-admin">
           <%if user_signed_in? %>
-            <%= link_to "マイページ", user_path(current_user), class: "login" %>
+            <%= link_to "マイページ", root_path, class: "login" %>
             <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "registration" %>
           <% else %>
             <%= link_to "ログイン", new_user_session_path, class: "login" %>
